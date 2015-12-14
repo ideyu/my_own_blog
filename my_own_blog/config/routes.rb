@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
-  get 'users/new'
+resources :users
 
-  get 'users/create'
+match '/', to: 'static_pages#index', via: 'get'
 
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/destroy'
+root 'static_pages#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
